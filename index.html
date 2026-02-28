@@ -1,0 +1,34 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>龟速方块 | Atmosphere Tetris</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="scene" aria-label="龟速版俄罗斯方块场景">
+    <div class="board-wrap">
+      <canvas id="board" aria-label="龟速版俄罗斯方块画面"></canvas>
+    </div>
+
+    <div class="status-card" aria-live="polite">
+      <div class="status-line"><span>音乐</span><strong id="audioStatus">准备中</strong></div>
+      <div class="status-line"><span>摄像头</span><strong id="cameraStatus">检测中</strong></div>
+      <div class="status-line"><span>动作</span><strong id="motionStatus">等待中</strong></div>
+    </div>
+
+    <div class="glow"></div>
+    <div id="tapHint" class="tap-hint">点击任意位置启用音乐与摄像头</div>
+
+    <audio id="bgm" loop preload="auto" playsinline webkit-playsinline="true">
+      <source src="ambient.mp3" type="audio/mpeg" />
+      <source src="assets/audio/ambient.mp3" type="audio/mpeg" />
+      <source src="assets/audio/ambient.ogg" type="audio/ogg" />
+      你的浏览器不支持音频播放。
+    </audio>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
